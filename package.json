@@ -1,0 +1,12 @@
+{
+  "name": "script-cut-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable agent skills for speech and debate interp: find, explain, cut, block, time, and judge scripts",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

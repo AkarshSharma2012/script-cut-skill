@@ -1,0 +1,25 @@
+{
+ "title": "Hamlet (demo cut)",
+ "author": "William Shakespeare",
+ "subtitle": "Demo of the format. Public domain source.",
+ "segments": [
+  {"kind": "cue", "text": "[stand center. dont move. stare past the judges like ur arguing with urself]"},
+  {"kind": "src", "text": "To be, or not to be, that is the question:", "tag": "[quiet, like ur asking urself for real. pause after 'be' both times]"},
+  {"kind": "src", "text": "Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune,", "tag": "[slow. hit 'suffer'. lil bitter on 'outrageous']"},
+  {"kind": "src", "text": "Or to take arms against a sea of troubles And by opposing end them.", "tag": "[get louder. make a fist on 'take arms'. let it drop on 'end them']"},
+  {"kind": "head", "text": "INTRO"},
+  {"kind": "intro", "text": "Everyone hits a point where giving up and pushing through feel the same size. Hamlet, by William Shakespeare.", "tag": "[ur real voice. calm. look at each judge once]"},
+  {"kind": "head", "text": "SCRIPT"},
+  {"kind": "cue", "text": "[take one step forward. hands open like ur weighing two things]"},
+  {"kind": "src", "text": "To die: to sleep; No more;", "tag": "[almost a whisper. wait 2 secs after 'no more']"},
+  {"kind": "src", "text": "To sleep: perchance to dream: ay, there's the rub;", "tag": "[lil laugh at urself on 'perchance'. then stop smiling on 'rub']"},
+  {"kind": "src", "text": "For who would bear the whips and scorns of time,", "tag": "[angry now. faster. count the list on ur fingers]"},
+  {"kind": "src", "text": "The pangs of despised love, the law's delay,", "tag": "[voice cracks on 'love'. dont stop for it]"},
+  {"kind": "src", "text": "But that the dread of something after death, The undiscover'd country from whose bourn No traveller returns, puzzles the will", "tag": "[slow way down. look up and far away on 'undiscover'd country']"},
+  {"kind": "cue", "text": "[hold 3 secs. let ur hands fall]"},
+  {"kind": "src", "text": "Thus conscience does make cowards of us all;", "tag": "[flat. honest. straight to the judges]"},
+  {"kind": "src", "text": "And lose the name of action.", "tag": "[quiet. last word soft. hold 3 secs. bow]"}
+ ],
+ "backup_cuts": ["1. 'The pangs of despised love, the law's delay,' (~3 sec)"],
+ "never_cut": "'To be, or not to be', 'Thus conscience does make cowards of us all'."
+}

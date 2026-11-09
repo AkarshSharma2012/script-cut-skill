@@ -1,0 +1,6 @@
+interface:
+  display_name: "Script Cut"
+  short_description: "Cut scripts into 10-minute speech and debate interp pieces"
+  default_prompt: "Use $script-cut to cut this script for interp with blocking, timing, and verified source lines."
+policy:
+  allow_implicit_invocation: true
