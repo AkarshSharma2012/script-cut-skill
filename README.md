@@ -8,7 +8,6 @@ AI agent skills for high school interp (DI, HI, Duo, POI). Find a script, cut it
 
 [![Verify](https://github.com/AkarshSharma2012/script-cut-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/AkarshSharma2012/script-cut-skill/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Works with Claude Code, Codex, jcode](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex%20%7C%20jcode-8A2BE2)
 ![Events](https://img.shields.io/badge/events-DI%20%7C%20HI%20%7C%20Duo%20%7C%20POI-orange)
 
 [Install](#install-in-30-seconds) · [Commands](#commands) · [Demo](examples/hamlet) · [Rules it follows](skills/script-cut/references/interp-guide.md)

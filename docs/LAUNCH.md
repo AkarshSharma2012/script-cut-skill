@@ -63,7 +63,7 @@ I'm in high school speech and debate (Dramatic Interp). Cutting a script down to
 
 So I turned my workflow into 7 skills: `/script-find`, `/script-explain`, `/script-cut`, `/script-block`, `/script-time`, `/script-judge`, `/script-intro`.
 
-The tricky part was that Claude kept "improving" lines, and in competition you can only cut, never add words. I fixed that with a checker script that compares every spoken line to the original PDF and flags anything that doesn't match.
+Competition rules allow cuts and prohibit adding words. I fixed that with a checker script that compares every spoken line to the original PDF and flags anything that doesn't match.
 
 It also writes blocking notes in plain language ("stand up. stare at an invisible dad for 3 secs") and a how-to-say-it tag on every line.
 
