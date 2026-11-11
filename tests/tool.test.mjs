@@ -60,8 +60,6 @@ test('build writes a docx with tags and backup cuts', { skip: !has && 'python-do
   const r = call(d, 'build', '$/src.txt', '$/cut.json', '$/out.docx');
   assert.equal(r.status, 0, r.stderr);
   const txt = spawnSync(py, ['-c', `import docx;print('\\n'.join(p.text for p in docx.Document(r'${join(d, 'out.docx')}').paragraphs))`], { encoding: 'utf8' }).stdout;
-  assert.ok(txt.includes('slow'));
-  assert.ok(txt.includes('To be, or not to be,'));
-  assert.ok(!txt.includes('[slow]'), 'brackets are stripped in the new layout');
+  assert.ok(txt.includes('[slow] To be, or not to be,'));
   assert.ok(txt.includes('IF UR OVER TIME'));
 });
