@@ -96,37 +96,11 @@ def check(src_path, cut, wpm):
 
 
 def build(src_path, cut, out, wpm):
-    from docx import Document
-    from docx.shared import Pt
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    import os
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from layout import render
     res = check(src_path, cut, wpm)
-    d = Document()
-    st = d.styles["Normal"]; st.font.name = "Times New Roman"; st.font.size = Pt(12)
-    p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run(cut.get("title", "Cutting")); r.bold = True; r.font.size = Pt(18)
-    if cut.get("author"):
-        p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.add_run(cut["author"]).italic = True
-    p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.add_run(cut.get("subtitle") or f"{res['spoken_words']} spoken words. [brackets] = do this, dont say it.").font.size = Pt(10)
-    for s in cut["segments"]:
-        k, t, tag = s["kind"], s["text"], s.get("tag", "")
-        p = d.add_paragraph()
-        if k == "head":
-            p.add_run(t).bold = True
-        elif k == "cue":
-            r = p.add_run(t); r.italic = True; r.font.size = Pt(10.5)
-        else:
-            if tag:
-                r = p.add_run(tag + " "); r.italic = True; r.bold = True; r.font.size = Pt(10.5)
-            p.add_run(t)
-    if cut.get("backup_cuts"):
-        d.add_paragraph().add_run("IF UR OVER TIME (cut these first, in this order)").bold = True
-        for t in cut["backup_cuts"]:
-            d.add_paragraph(t)
-        if cut.get("never_cut"):
-            d.add_paragraph("Do NOT cut: " + cut["never_cut"])
-    d.save(out)
+    render(cut, out, f"{res['spoken_words']} spoken words  ·  ~{res['est_with_pauses'].split(' (')[0]} with pauses (estimate)")
     res["wrote"] = out
     return res
 
